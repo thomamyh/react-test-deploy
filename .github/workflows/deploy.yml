@@ -13,4 +13,9 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          kill -9 $(pgrep npm)
+          kill -9 $(fuser 3000/tcp 2>/dev/null)
+          cd /react-test-deploy
+          git pull
+          npm run dev
