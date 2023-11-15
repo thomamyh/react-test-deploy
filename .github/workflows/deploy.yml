@@ -14,8 +14,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          kill -9 $(pgrep npm)
-          kill -9 $(fuser 3000/tcp 2>/dev/null)
+          systemctl stop website
           cd /root/react-test-deploy
           git pull
-          npm run dev
+          systemctl start website
