@@ -16,6 +16,6 @@ jobs:
         script: |
           kill -9 $(pgrep npm)
           kill -9 $(fuser 3000/tcp 2>/dev/null)
-          cd /react-test-deploy
+          cd /root/react-test-deploy
           git pull
           npm run dev
