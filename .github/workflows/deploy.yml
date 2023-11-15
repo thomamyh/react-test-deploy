@@ -11,7 +11,7 @@ jobs:
       with:
         host: 172.232.133.47
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
           systemctl stop website
