@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing here and now, Thomas!
+          Start editing here and now, Thomas!
         </p>
         <div>
           <a
